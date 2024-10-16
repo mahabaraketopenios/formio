@@ -1,17 +1,30 @@
 <div class="p-3">
-    <p class="text-center">
-        Preview </p>
-    <div class="form-builder-preview">
-        <formio [form]="formJson"></formio>
-    </div>
+  <p class="text-center">Preview</p>
+  <div class="form-builder-preview">
+    <formio [form]="formJson"></formio>
+  </div>
 
-    <p class="text-center mt-2">builder </p>
-    <div class="form-builder-design">
-        <form-builder [form]="formJson" [options]="options" (change)="onChangeDesign($event)"></form-builder>
-    </div>
+  <p class="text-center mt-2">builder</p>
+  <div class="form-builder-design">
+    <form-builder
+      [form]="formJson"
+      [options]="options"
+      (change)="onChangeDesign($event)"
+    ></form-builder>
+  </div>
 
-
-    <!--  <app-index></app-index> -->
-    <pre id="jsonPreview" style="width: 600px; height: 400px; overflow: auto; border: 1px solid #ccc;"><code class="language-json" #jsonPreview>{{json}}</code></pre>
-
+  <!--  <app-index></app-index> -->
+  <p class="text-center mt-2">JsonPreview</p>
+  <pre
+    id="jsonPreview"
+    style="
+      width: 700px;
+      height: 400px;
+      overflow: auto;
+      border: 1px solid #3498db;
+      border-radius: 8px;
+      margin-left: auto;
+      margin-right: auto;
+    "
+  ><code class="language-json" #jsonPreview>{{json}}</code></pre>
 </div>
